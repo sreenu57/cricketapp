@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+html {
+    height: 100vh;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    background: url(https://dm0qx8t0i9gc9.cloudfront.net/watermarks/image/rDtN98Qoishumwih/abstract-cricket-background_XJ-MMW_SB_PM.jpg);
+}
+
+h2 {
+    color: black;
+}
+
+.accordion {
+    max-width: 990px;
+    background: rgba(0, 0, 0, 0.10);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+.box {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-position: left;
+    background-size: cover;
+    transition: .7s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+
+.box:hover {
+    flex: 7;
+    height: 400px;
+}
+
+.a1 {
+    background-image: url("https://image.shutterstock.com/image-illustration/flag-australia-260nw-72746830.jpg");
+}
+
+.a2 {
+    background-image: url("https://image.shutterstock.com/image-illustration/england-national-flag-on-fabric-260nw-411790123.jpg")
+}
+
+.a3 {
+    background-image: url("https://wallpapercave.com/wp/wp2553403.jpg");
+    color: #fff;
+}
+
+.a4 {
+    background-image: url("https://t4.ftcdn.net/jpg/02/63/59/67/360_F_263596712_sTBmG65xOBEvMeMee7oH3wL51vKxuDcc.jpg");
+    color: #fff;
+}
+
+.a5 {
+    background-image: url("https://image.shutterstock.com/image-illustration/south-africa-flag-silk-3d-260nw-1469797319.jpg");
+}
+
+.a6 {
+    background-image: url("https://cdn.countryflags.com/thumbs/new-zealand/flag-400.png");
+    color: #fff;
+}
+
+.a7 {
+    background-image: url("https://i.ytimg.com/vi/Tc8Z6HAhF9E/hqdefault.jpg");
+    color: #fff;
+}
+
+.a8 {
+    background-image: url("https://media.istockphoto.com/photos/flag-of-bangladesh-blowing-in-the-wind-picture-id1219362807?k=6&m=1219362807&s=612x612&w=0&h=U45ws3-h8dqVRv7N0jodPJLCRmYqGwVVKfjMBc453DE=");
+    color: #fff;
+}
+
+.a9 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwJR65qzn2bbcvO47GisvA1nKdZ958G3aI-g&usqp=CAU");
+    color: #fff;
+}
+
+.a10 {
+    background-image: url("https://image.shutterstock.com/image-illustration/zimbabwe-3d-waving-flag-illustration-260nw-1144217873.jpg");
+    color: #fff;
+}
+
+p {
+    font-weight: normal;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+
+.box:hover .text {
+    opacity: 1;
+}
+
+h1 {
+    width: 250px;
+    text-align: center;
+    margin: 100px auto 20px auto;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+
+
+/*plyer*/
+
+.our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+    height: 100%;
+}
+
+.our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+.our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+    bottom: 0;
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+.our-team .social li a:hover {
+    color: #1369ce;
+    background-color: #f7f5ec;
+}
+
+
+/*t2*/
+
+.a-box {
+    display: inline-block;
+    width: 240px;
+    text-align: center;
+}
+
+.img-container {
+    height: 230px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    display: inline-block;
+}
+
+.img-container img {
+    transform: skew(0deg, -13deg);
+    height: 250px;
+    margin: -35px 0px 0px -70px;
+}
+
+.inner-skew {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0px;
+    transform: skew(0deg, 13deg);
+    font-size: 0px;
+    margin: 30px 0px 0px 0px;
+    background: #c8c2c2;
+    height: 250px;
+    width: 200px;
+}
+
+.text-container {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
+}
+
+.text-container h3 {
+    margin: 20px 0px 10px 0px;
+    color: #04bcff;
+    font-size: 18px;
+}
+
+
+/*t3*/
+
+:root {
+    --surface-color: rgb(250, 245, 245);
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.card__arc path {
+    fill: var(--surface-color);
+}
+
+.card:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #3a0eda;
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #3808e6;
+}
+
+.card__status {
+    font-size: .8em;
+    color: #161415;
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #e7e409;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+
+/*buuton*/
